@@ -1,0 +1,13 @@
+streamlit
+langchain
+langchain-core
+langchain-community
+langchain-google-genai
+langchain-text-splitters
+langgraph
+chromadb
+sentence-transformers
+pypdf
+tavily-python
+pydantic
+typing-extensions
