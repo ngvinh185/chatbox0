@@ -14,7 +14,7 @@ from typing import Any
 os.environ['TAVILY_API_KEY'] ='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'
 
 from langchain_community.tools.tavily_search import TavilySearchResults
-os.environ['GOOGLE_API_KEY'] = "TAVILY_API_KEY"
+os.environ['GOOGLE_API_KEY'] = st.secrets["TAVILY_API_KEY"]
 llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
 websearch_tool = TavilySearchResults()
 def route_query(state):
