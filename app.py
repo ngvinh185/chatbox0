@@ -22,7 +22,7 @@ pages = loader.load()
 #       break
 
 
-os.environ['GOOGLE_API_KEY'] = "GOOGLE_API_KEY"
+os.environ['GOOGLE_API_KEY'] = st.secrets["GOOGLE_API_KEY"]
 
 
 # splitter = RecursiveCharacterTextSplitter(chunk_size = 500, chunk_overlap = 200)
