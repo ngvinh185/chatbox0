@@ -69,7 +69,7 @@ st.title('Ask AI 🤖')
 #   prompt1 = ChatPromptTemplate.from_template(template1)
 #   generate_queries = (
 #     prompt1
-#     | ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+#     | ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 #     | StrOutputParser() 
 #     | (lambda x: x.split("\n"))
 # )
@@ -82,7 +82,7 @@ st.title('Ask AI 🤖')
 #   prompt2 = ChatPromptTemplate.from_template(template2)
   
 #   chain = (
-#     {'question': itemgetter("question"), 'context': retriver_chain} | prompt2 | ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+#     {'question': itemgetter("question"), 'context': retriver_chain} | prompt2 | ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 #     | StrOutputParser() 
 #   )
 #   return chain.invoke({'question': question})
