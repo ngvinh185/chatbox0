@@ -15,7 +15,7 @@ os.environ['TAVILY_API_KEY'] =st.secrets["TAVILY_API_KEY"]
 
 from langchain_community.tools.tavily_search import TavilySearchResults
 os.environ['GOOGLE_API_KEY'] = st.secrets["GOOGLE_API_KEY"]
-llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
 websearch_tool = TavilySearchResults()
 def route_query(state):
   q = state['question']
@@ -38,7 +38,7 @@ def route_query(state):
     The vectorstore contains documents related to agents, prompt engineering, and adversarial attacks.
     Use the vectorstore for questions on these topics. Otherwise, use web-search.""" 
   
-  llm = ChatGoogleGenerativeAI(model="gemini-2.5-flash", temperature=0)
+  llm = ChatGoogleGenerativeAI(model="gemini-1.5-flash", temperature=0)
   structered_llm = llm.bind_tools(
     tools = [websearch, vectorstore]
   )
